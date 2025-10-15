@@ -7,8 +7,18 @@ import type {
   Certificate,
 } from '../types';
 import avatar from '../assets/avatar.jpg';
+import bookCover from '../assets/image.png';
 
 export const mockData = {
+  books: [
+    {
+      id: 'b1',
+      title: 'Спів душі Аліції',
+      description: 'Збірка віршів польською мовою',
+      year: '2023',
+      link: bookCover,
+    },
+  ],
   teacher: {
     name: 'Алла Гульмирівна',
     role: 'Вчителька польської та англійської мови',
@@ -17,28 +27,41 @@ export const mockData = {
   },
   education: [
     {
-      year: '2012',
-      title: 'Магістр педагогіки',
-      institution: 'КНУ ім. Т. Шевченка',
+      year: '2020–2022',
+      title: 'Викладач англійської мови та вчитель зарубіжної літератури',
+      institution: 'НПУ імені М.П. Драгоманова, Київ',
+      details: 'Тривалість навчання: 2 роки',
     },
     {
-      year: '2018',
-      title: 'Курс з інклюзивної освіти',
-      institution: 'Нова Школа',
+      year: '2016–2018',
+      title: 'Юридичний факультет — Медичне та фармацевтичне право',
+      institution: 'Міжнародний університет економіки та права "КРОК", Київ',
+      details: 'Тривалість навчання: 1 рік 6 місяців',
+    },
+
+    {
+      year: '2012–2016',
+      title: 'Психологія',
+      institution: 'Міжнародний університет економіки та права "КРОК", Київ',
+      details: 'Тривалість навчання: 4 роки',
+    },
+    {
+      year: '2009–2012',
+      title: 'Вчитель польської мови',
+      institution: 'Akademia Filozoficzno-Pedagogiczna Ignatianum, Краків',
+      details: 'Тривалість навчання: 3 роки',
     },
   ] as Education[],
+
   cooperation: [
     {
       id: 'co1',
-      title: 'Програма обміну "Міст знань"',
-      description: 'Семінари з білінгвального навчання в Польщі.',
-    },
-    {
-      id: 'co2',
-      title: 'Конференція "Цифрова Освіта"',
-      description: 'Доповідь про інтерактивні методи у школі.',
+      title: 'Телемости з польськими школами',
+      description:
+        'Онлайн-зустрічі (Zoom) для обміну навчальним досвідом з польськими колегами.',
     },
   ] as Cooperation[],
+
   certificates: [
     {
       id: 'cert1',
@@ -51,6 +74,7 @@ export const mockData = {
       date: 'Червень 2023',
     },
   ] as Certificate[],
+
   studentWork: [
     {
       id: 'sw1',

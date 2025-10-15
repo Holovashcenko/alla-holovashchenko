@@ -20,6 +20,9 @@ export const Header = () => (
         <a href="#cooperation" className="hover:text-indigo-600">
           Співпраця
         </a>
+        <a href="#books" className="hover:text-indigo-600">
+          Книги
+        </a>
         <a href="#certificates" className="hover:text-indigo-600">
           Сертифікати
         </a>

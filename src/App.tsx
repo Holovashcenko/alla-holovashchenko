@@ -12,6 +12,7 @@ import {
   Section,
   StudentWorkSection,
 } from './components';
+import { BooksSection } from './components/BooksSection';
 
 export default function TeacherWebsite() {
   return (
@@ -22,6 +23,7 @@ export default function TeacherWebsite() {
         <Hero />
         <EducationSection />
         <CooperationSection />
+        <BooksSection />
         <CertificatesSection />
         <StudentWorkSection />
         <ProjectsSection />
