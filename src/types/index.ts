@@ -4,7 +4,13 @@ export type Education = {
   institution: string;
   details: string;
 };
-export type Cooperation = { id: string; title: string; description: string };
+export type Cooperation = {
+  id: string;
+  title: string;
+  description: string;
+  images: string[];
+  details: string;
+};
 export type Certificate = { id: string; title: string; date: string };
 export type StudentWork = {
   id: string;
