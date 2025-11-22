@@ -17,12 +17,15 @@ export type StudentWork = {
   title: string;
   type: string;
   date: string;
+  imageUrls: string[];
 };
 export type Project = {
   id: string;
   title: string;
   role: string;
-  description: string;
+  posterUrl?: string;
+  gallery?: string[];
+  descriptionParts: DescriptionPart[];
 };
 export type Lesson = {
   id: string;
@@ -31,3 +34,9 @@ export type Lesson = {
   photo?: string;
   date: string;
 };
+type DescriptionPart =
+  | { type: 'text'; content: string }
+  | { type: 'date'; content: string }
+  | { type: 'award'; title: string; content: string }
+  | { type: 'highlight'; content: string }
+  | { type: 'divider' };

@@ -38,9 +38,9 @@ export const Hero = () => (
       className="flex justify-center"
     >
       <img
-        src={mockData.teacher.photo}
+        src={mockData.teacher.mainPhoto}
         alt="teacher"
-        className="rounded-2xl shadow-xl w-64 h-64 object-cover md:w-full border-4 border-indigo-100"
+        className="rounded-2xl shadow-xl  object-cover md:w-full border-4 border-indigo-100"
       />
     </motion.div>
   </motion.section>

@@ -7,10 +7,24 @@ import type {
   Certificate,
 } from '../types';
 import avatar from '../assets/avatar.jpg';
+import mainAvatar from '../assets/main-ava.jpg';
+
 import bookCover from '../assets/image.png';
+
 import Zoom1 from '../assets/zoom1.png';
 import Zoom2 from '../assets/zoom2.jpg';
 import Zoom3 from '../assets/zoom3.png';
+
+import Lesson1 from '../assets/lesson1.jpg';
+
+import StudentWorkFood1 from '../assets/student-works/food/1.jpg';
+
+import Competition1 from '../assets/stem-poster.png';
+
+import StudentWorkCensored1 from '../assets/student-works/censored/1.jpg';
+import StudentWorkCensored2 from '../assets/student-works/censored/2.jpg';
+import StudentWorkCensored3 from '../assets/student-works/censored/3.jpg';
+import StudentWorkCensored4 from '../assets/student-works/censored/4.jpg';
 
 export const mockData = {
   books: [
@@ -27,6 +41,7 @@ export const mockData = {
     role: 'Вчителька польської мови',
     bio: 'Я люблю допомагати дітям відкривати світ через гру, читання та експерименти. Маю 20 років досвіду та вже випустила збірку віршів на польській мові.',
     photo: avatar,
+    mainPhoto: mainAvatar,
   },
   education: [
     {
@@ -83,45 +98,70 @@ export const mockData = {
   studentWork: [
     {
       id: 'sw1',
-      title: 'Малюнки "Моє місто"',
-      type: 'Малюнки',
-      date: 'Травень',
+      title: 'Здоровий спосіб життя',
+      type: 'Лекція та малюнки учнів',
+      date: 'Жовтень',
+      imageUrls: [StudentWorkFood1],
     },
     {
       id: 'sw2',
-      title: 'Аплікації "Кольорова Осінь"',
-      type: 'Аплікації',
-      date: 'Жовтень',
+      title: "Вплив ненормативної лексики на здоров'",
+      type: 'Лекція та малюнки учнів',
+      date: 'Листопад',
+      imageUrls: [
+        StudentWorkCensored1,
+        StudentWorkCensored2,
+        StudentWorkCensored3,
+        StudentWorkCensored4,
+      ],
     },
   ] as StudentWork[],
   projects: [
     {
       id: 'p1',
-      title: 'Екологічний проєкт "Зелена школа"',
-      role: 'Керівник',
-      description: 'Висадка дерев та сортування відходів.',
-    },
-    {
-      id: 'p2',
-      title: 'Конкурс читців "Слово"',
+      title: 'MIĘDZYNARODOWY KONKURS LITERACKI „MAM TALENT”',
       role: 'Організатор',
-      description: 'Підготовка учнів до міського конкурсу.',
+      posterUrl: Competition1,
+      gallery: [] as string[],
+
+      descriptionParts: [
+        {
+          type: 'text',
+          content:
+            'Подія, організована спільно зі Szkołą Podstawową nr 1 w Swarzędzu (Польща) та Ліцеєм «Гармонія» №9 у Києві (Україна).',
+        },
+        { type: 'date', content: '26 березня' },
+        {
+          type: 'text',
+          content:
+            'Запрошуємо молодих авторів до участі в конкурсі, що відкриває літературні таланти.',
+        },
+        { type: 'divider' },
+        {
+          type: 'award',
+          title: 'Головна нагорода',
+          content:
+            'Авторський збірник поезій Алли Головащенко з особистим автографом',
+        },
+        {
+          type: 'award',
+          title: 'Додаткові призи',
+          content: 'Дипломи, відзнаки та публікація найкращих робіт',
+        },
+        {
+          type: 'highlight',
+          content: 'Покажи свій талант — дозволь себе почути!',
+        },
+      ],
     },
   ] as Project[],
   lessons: [
     {
       id: 'l1',
-      title: 'Урок "Тварини Польщі"',
+      title: 'Онлайн урок',
       description: 'Інтерактивне заняття з картинками та аудіо.',
-      photo: 'path/to/lesson1.jpg',
-      date: '12.09.2025',
-    },
-    {
-      id: 'l2',
-      title: 'Фонетична гра "Голосні та Приголосні"',
-      description: 'Вправа на розрізнення звуків.',
-      photo: 'path/to/lesson2.jpg',
-      date: '05.10.2025',
+      photo: Lesson1,
+      date: '20.11.2025',
     },
   ] as Lesson[],
 };
